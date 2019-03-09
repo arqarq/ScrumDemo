@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ContactController {
 
     @Autowired
-    private ContactService service;
+    private ContactService contactService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public void addContact (@RequestBody Contact contact) {
-        service.save(contact);
+        contactService.save(contact);
     }
 
 }

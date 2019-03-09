@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 public class ContactService {
 
     @Autowired
-    private ContactRepository repository;
+    private ContactRepository contactRepository;
 
     public void save (Contact contact) {
-        repository.save(contact);
+        contactRepository.save(contact);
     }
 
 }
