@@ -1,21 +1,21 @@
-package pl.sdacacademy.scrum.ScrumDemo.model;
+package pl.sdacacademy.scrumdemo.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
-//import javax.persistence.Entity;
-//import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-//@Entity
 //@Table(name = "person")
+@Entity
 @Data
 public class Contact {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String firstName;
     String lastName;
     String phoneNumber;
     String email;
-
-
 }

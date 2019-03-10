@@ -1,7 +1,6 @@
-package pl.sdacacademy.scrum.ScrumDemo.model;
+package pl.sdacacademy.scrumdemo.model;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface ContactRepository extends CrudRepository <Contact,Long> {
-
+public interface ContactRepository extends CrudRepository<Contact, Long> {
 }
