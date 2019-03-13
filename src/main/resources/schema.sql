@@ -1,0 +1,11 @@
+-- CREATE DATABASE addressbook;
+-- CREATE USER springuser WITH ENCRYPTED PASSWORD 'sda';
+-- GRANT All PRIVILEGES ON DATABASE addressbook TO springuser;
+-- SET SESSION ROLE springuser;
+-- create database addressbook;
+-- create user 'springuser'@'%' identified by 'sda';
+-- grant all on addressbook.* to 'springuser'@'%';
+-- revoke all on addressbook.* from 'springuser'@'%';
+-- grant select, insert, delete, update on addressbook.* to 'springuser'@'%';
+-- select *
+-- from addressbook.contact;
