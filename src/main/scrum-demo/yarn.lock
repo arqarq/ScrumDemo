@@ -285,6 +285,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@ng-select/ng-select@^2.16.2":
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-2.16.2.tgz#1c7444645fa867bb72ec1f4e2a53baa7c98353c9"
+  integrity sha512-aaTpx5XFOizuiAGeDTgCX/RR9Zqt/dBV9rG9GCWCuOrigH/lsPSLRVZ5m4foYy9Kl3fA5bgiqYcy4o3p9Pg1jQ==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngtools/webpack@7.3.6":
   version "7.3.6"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-7.3.6.tgz#3f90c60f7c1742fa4a557f90def8fe742304f4c5"
