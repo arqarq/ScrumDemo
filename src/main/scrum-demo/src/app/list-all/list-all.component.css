@@ -1,0 +1,23 @@
+div {
+  width: 300px;
+  text-align: left;
+  margin-left: 30vmin;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.link {
+  text-align: right;
+}
+
+p.separator {
+  min-height: 0;
+}
+
+.login-container {
+
+}
+
+.password-container {
+
+}

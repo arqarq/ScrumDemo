@@ -1,14 +1,11 @@
-<p>
-  list-all works!
-</p>
 <!--<ng-select
   [items]="bullets"
   bindValue="value" bindLabel="name"
   [(ngModel)]="bullets"
 ></ng-select>-->
-<label>Custom label option and optgroup</label>
-<div style="width: 300px">
-  <ng-select [draggable]="true" [items]="cities3" groupBy="avatar" [(ngModel)]="selectedCity3" bindLabel="name" bindValue="name">
+<!--<label>Custom label option and optgroup</label>-->
+<div class="ng-input login-container">
+  <ng-select placeholder="login..." [items]="cities3" groupBy="avatar" [(ngModel)]="selectedCity3" bindLabel="name" bindValue="name">
     <ng-template ng-label-tmp let-item="item">
       <img alt="aaa" height="15" width="15" [src]="item.avatar"/>
       <b>{{item.name}}</b>
@@ -21,20 +18,20 @@
     </ng-template>
   </ng-select>
 </div>
-<p>
-  Selected city name: {{selectedCity3}}
+<p class="separator">
+  <!--Selected city name: {{selectedCity3}}-->
 </p>
 
-<div style="width: 300px">
-  <label>Custom label</label>
-  <ng-select draggable="true" [items]="cities" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name">
+<div class="ng-input password-field">
+  <!--<label>Custom label</label>-->
+  <ng-select placeholder="hasło..." [items]="cities" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name">
     <ng-template ng-label-tmp let-item="item">
       <img alt="ccc" height="15" width="15" [src]="item.avatar"/>
       {{item.name}}
     </ng-template>
   </ng-select>
 </div>
-<p>
-  Selected city name: {{selectedCity}}
-</p>
+<div class="link">
+  <a target="_blank" rel="noopener" href="">załóż konto</a>
+</div>
 <!--<hr>-->
