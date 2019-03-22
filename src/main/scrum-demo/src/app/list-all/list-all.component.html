@@ -8,7 +8,7 @@
 ></ng-select>-->
 <label>Custom label option and optgroup</label>
 <div style="width: 300px">
-  <ng-select [items]="cities3" groupBy="avatar" [(ngModel)]="selectedCity3" bindLabel="name" bindValue="name">
+  <ng-select [draggable]="true" [items]="cities3" groupBy="avatar" [(ngModel)]="selectedCity3" bindLabel="name" bindValue="name">
     <ng-template ng-label-tmp let-item="item">
       <img alt="aaa" height="15" width="15" [src]="item.avatar"/>
       <b>{{item.name}}</b>
@@ -27,7 +27,7 @@
 
 <div style="width: 300px">
   <label>Custom label</label>
-  <ng-select [items]="cities" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name">
+  <ng-select draggable="true" [items]="cities" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name">
     <ng-template ng-label-tmp let-item="item">
       <img alt="ccc" height="15" width="15" [src]="item.avatar"/>
       {{item.name}}
@@ -37,4 +37,4 @@
 <p>
   Selected city name: {{selectedCity}}
 </p>
-<hr>
+<!--<hr>-->
