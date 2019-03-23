@@ -7,6 +7,8 @@ import {Title} from "@angular/platform-browser";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  logged: boolean = false;
+
   public constructor(private titleService: Title) {
   }
 

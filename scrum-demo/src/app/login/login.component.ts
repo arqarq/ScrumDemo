@@ -3,10 +3,10 @@ import {NgSelectConfig} from "@ng-select/ng-select";
 
 @Component({
   selector: 'app-list-all',
-  templateUrl: './list-all.component.html',
-  styleUrls: ['./list-all.component.css']
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class ListAllComponent implements OnInit {
+export class LoginComponent implements OnInit {
   bullets = [
     {name: 1, value: "Arek"},
     {name: 2, value: "Sekuła"}

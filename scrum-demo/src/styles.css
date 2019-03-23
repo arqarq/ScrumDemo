@@ -7,7 +7,7 @@ body {
     circle farthest-corner at bottom right,
     rgba(0, 0, 160, 0.75),
     rgba(32, 107, 159, 0.65),
-    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255),
     rgba(155, 253, 255, 0.7),
     rgba(33, 106, 133, 0.5),
     rgba(29, 97, 140, 1));
@@ -16,4 +16,21 @@ body {
   /*background-color: #9BFDFF;*/
   /*background-color: #216A85;*/
   background-attachment: fixed;
+}
+
+.inline {
+  display: inline-block;
+  /*border: 2px solid black;*/
+  max-width: 150px;
+  vertical-align: top;
+}
+
+.h2-account {
+  color: #00407f;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+p.separator {
+  margin: 1.7vmin;
 }

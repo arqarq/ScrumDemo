@@ -1,4 +1,6 @@
-<div>
-  <h2 class="title-login">Zaloguj się</h2>
+<div *ngIf="logged == false">
+  <app-list-all></app-list-all>
 </div>
-<app-list-all></app-list-all>
+<div *ngIf="logged == true">
+  dupsko
+</div>
