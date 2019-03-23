@@ -4,11 +4,13 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import {NgSelectModule} from "@ng-select/ng-select";
+import {NewAccountComponent} from './new-account/new-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
