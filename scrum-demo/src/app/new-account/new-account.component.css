@@ -11,7 +11,7 @@ div.div-account {
   margin-left: 30vmin;
   margin-top: 20vmin;
   margin-bottom: 1.7vmin;
-  /*border: 2px solid black;*/
+  padding-left: 2px;
 }
 
 div.inline.button {
@@ -22,6 +22,11 @@ div.inline.button {
 div.inline.link {
   text-align: left;
   line-height: 1;
+  padding-left: 2px;
+}
+
+div.inline.validate {
+  margin-left: 0;
 }
 
 div.link > a {

@@ -1,22 +1,84 @@
-<p>
-  new-account works!
-</p>
 <div class="div-account">
   <h2 class="h2-account">Wpisz dane</h2>
 </div>
-<form>
+<form id="form1"
+      novalidate
+      method="post"
+      name="myForm"
+      #ff="ngForm"
+      (ngSubmit)="save(ff)">
+  <b>R</b>{{ff.controls['login']?.errors?.required ? 'true' : 'false'}}
+  /<b>D</b>{{ff.controls['login']?.dirty ? 'true' : 'false'}}<br>
+  <b>R</b>{{ff.control.get('pass')?.errors?.required ? 'true' : 'false'}}
+  /<b>D</b>{{ff.controls['pass']?.dirty ? 'true' : 'false'}}<br>
+  <b>R</b>{{ff.form.get('repass')?.errors?.required ? 'true' : 'false'}}
+  /<b>D</b>{{ff.controls['repass']?.dirty ? 'true' : 'false'}}<br>
+  <b>R</b>{{ff.controls.email?.errors?.required ? 'true' : 'false'}}
+  /<b>D</b>{{ff.controls['email']?.dirty ? 'true' : 'false'}}<br>
+  <b>login:</b>{{$login.invalid}}
+  <b>password:</b>{{$password.invalid}}
+  <b>repass:</b>{{$repass.invalid}}
+  <b>email:</b>{{$email.invalid}}
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="login...">
+    <input class="form-control"
+           type="text"
+           id="inputLogin"
+           placeholder="login..."
+           name="login"
+           #$login="ngModel"
+           required
+           ngModel>
+    <div class="inline validate"
+         [hidden]="!(ff.controls['login']?.dirty && ff.controls['login']?.invalid)">
+      <small class="text-danger"
+             [hidden]="!ff.controls['login']?.errors?.valueOf().required">To pole jest wymagane.
+      </small>
+    </div>
   </div>
   <p class="separator"></p>
   <div class="form-group">
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password...">
+    <input class="form-control"
+           type="password"
+           id="inputPassword"
+           placeholder="password..."
+           name="pass"
+           #$password="ngModel"
+           required
+           ngModel>
+  </div>
+  <p class="separator"></p>
+  <div class="form-group">
+    <input class="form-control"
+           type="password"
+           id="retypePassword"
+           placeholder="powtórz hasło..."
+           name="repass"
+           #$repass="ngModel"
+           required
+           ngModel>
+  </div>
+  <p class="separator"></p>
+  <div class="form-group">
+    <input class="form-control"
+           type="email"
+           pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+           id="inputEmail"
+           placeholder="email..."
+           name="email"
+           #$email="ngModel"
+           ngModel>
   </div>
   <p class="separator"></p>
 </form>
 <div class="inline link">
-  <a target="_blank" rel="noopener" href="">wróć</a>
+  <a
+    target="_blank"
+    rel="noopener"
+    href="">wróć</a>
 </div>
 <div class="inline button">
-  <button type="submit" class="btn btn-primary">załóż konto</button>
+  <button class="btn btn-primary"
+          form="form1"
+          [disabled]="submitHide(ff)">załóż konto
+  </button>
 </div>
