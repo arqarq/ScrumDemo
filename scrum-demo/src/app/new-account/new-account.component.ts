@@ -21,6 +21,7 @@ export class NewAccountComponent implements OnInit {
 
   save(f: NgForm) {
     alert("OK!");
-    this.router.navigate(['login'])
+    let booleanPromise = this.router.navigate(['login']);
+    alert(typeof booleanPromise)
   }
 }
