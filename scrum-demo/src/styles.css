@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@ng-select/ng-select/themes/default.theme.css";
 
 body {
   background-color: white;
@@ -33,4 +32,41 @@ body {
 
 p.separator {
   margin: 1.7vmin;
+}
+
+div {
+  width: 300px;
+  text-align: left;
+  margin-left: 30vmin;
+  margin-top: 0;
+  margin-bottom: 0;
+  /*border: 2px solid black;*/
+}
+
+div.div-account {
+  margin-left: 30vmin;
+  margin-top: 20vmin;
+  margin-bottom: 1.7vmin;
+  padding-left: 2px;
+  /*border: 2px solid black;*/
+}
+
+div.inline.button {
+  text-align: right;
+  margin-left: 0;
+}
+
+div.inline.link {
+  text-align: left;
+  line-height: 1;
+  padding-left: 2px;
+}
+
+nav > a {
+  color: #00407f;
+}
+
+div.inline.validate {
+  margin-left: 0;
+  padding-left: 2px;
 }

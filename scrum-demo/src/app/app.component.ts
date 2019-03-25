@@ -12,11 +12,11 @@ export class AppComponent implements OnInit {
   public constructor(private titleService: Title) {
   }
 
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle)
-  }
-
   ngOnInit() {
     this.setTitle('Twitter')
+  }
+
+  private setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle)
   }
 }
