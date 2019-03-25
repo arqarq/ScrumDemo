@@ -70,3 +70,7 @@ div.inline.validate {
   margin-left: 0;
   padding-left: 2px;
 }
+
+small {
+  font-weight: bolder;
+}
