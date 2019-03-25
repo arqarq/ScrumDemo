@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-new-account',
@@ -7,7 +8,7 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./new-account.component.css']
 })
 export class NewAccountComponent implements OnInit {
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class NewAccountComponent implements OnInit {
   }
 
   save(f: NgForm) {
-    alert("OK!")
+    alert("OK!");
+    this.router.navigate(['login'])
   }
 }
