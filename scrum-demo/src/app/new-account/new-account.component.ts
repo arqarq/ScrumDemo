@@ -21,7 +21,17 @@ export class NewAccountComponent implements OnInit {
 
   save(f: NgForm) {
     alert("OK!");
-    let booleanPromise = this.router.navigate(['login']);
-    alert(typeof booleanPromise)
+    // let booleanPromise = this.router.navigate(['login']);
+    // alert(typeof booleanPromise);
+    $.ajax({
+      url: "http://localhost/accounts",
+      method: "post",
+      contentType: "application/json",
+      data: JSON.stringify(f.value),
+      success: function (account) {
+        // alert("-" + window.id + " " + window.width + " " + window.height);
+        alert("dodano konto z login: " + account.login)
+      }
+    });
   }
 }

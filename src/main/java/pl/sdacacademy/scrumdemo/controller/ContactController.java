@@ -3,13 +3,18 @@ package pl.sdacacademy.scrumdemo.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import pl.sdacacademy.scrumdemo.ScrumDemoApplication;
 import pl.sdacacademy.scrumdemo.model.Contact;
+import pl.sdacacademy.scrumdemo.model.Contact2;
 import pl.sdacacademy.scrumdemo.service.ContactService;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Controller
 public class ContactController {
+    private static final Logger LOG = Logger.getLogger(ScrumDemoApplication.class.getName());
     private final ContactService contactService;
 
     ContactController(ContactService contactService) {
@@ -31,5 +36,11 @@ public class ContactController {
                 contactService.save(temp);
             }
         }
+    }
+
+    @PostMapping("/accounts")
+    public Contact2 addAccount(@RequestBody Contact2 contact2s) {
+        LOG.log(Level.INFO, "Przyszło: " + contact2s.getEmail());
+        return contact2s;
     }
 }
