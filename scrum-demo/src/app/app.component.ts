@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import * as $ from 'jquery';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
