@@ -43,7 +43,6 @@ public class ContactController {
         }
     }
 
-    @CrossOrigin
     @PostMapping("/new_account")
     public ResponseEntity<Contact2> addAccount(@RequestBody Contact2 contact2s) {
         LOG.log(Level.INFO, "Przyszło: " + contact2s.getEmail());
